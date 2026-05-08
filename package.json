@@ -4,26 +4,30 @@
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/node": "^25.6.0",
-    "typescript": "^6.0.3"
+    "@types/supertest": "^7.2.0",
+    "supertest": "^7.2.2",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.5"
   },
   "name": "balenciaga-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "tsx": "^4.21.0",
     "better-sqlite3": "^12.9.0",
     "cors": "^2.8.6",
     "esbuild": "^0.27.7",
     "express": "^5.2.1",
     "get-tsconfig": "^4.14.0",
     "resolve-pkg-maps": "^1.0.0",
+    "tsx": "^4.21.0",
     "undici-types": "^7.19.2"
   },
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
