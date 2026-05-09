@@ -23,6 +23,6 @@ shadow_height TEXT
 db.exec(`INSERT OR IGNORE INTO products (title, price, src, quantity, shadow_bottom, shadow_left, shadow_width, shadow_height)
   VALUES 
   ('3XL', 1090, '3xl.png', 0, '-5px', '-2%', '103%', '13px'),
-  ('TRACK', 925, 'track.png', 0, '-2px', '9%', '83%', '12px'),
+  ('TRACK', 925, 'track.png', 0, '-2px', '1%', '101%', '12px'),
   ('RUNNER', 975, 'runner.png', 0, '-4px', '1%', '97%', '14px')`)
 export default db;
