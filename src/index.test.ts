@@ -1,7 +1,18 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, beforeAll } from 'vitest';
 import request from 'supertest';
-import app from './index';
+import { createApp } from './index';
+import createDatabase from './database';
+import fs from 'fs';
+import { Express } from 'express';
 
+let app: Express;
+beforeAll(() => {
+  if (fs.existsSync('shop.test.db')) {
+    fs.unlinkSync('shop.test.db');
+  }
+  const db = createDatabase('shop.test.db');
+  app = createApp(db);
+});
 interface Product {
   id: number;
   title: string;
